@@ -1,9 +1,11 @@
 ####################################################
 #1. Merge train and test set. (plus name columns)
 ####################################################
+#first set the working directory to the script location (which also contains the unzipped data files/directories)
+
 
 setwd("./train")
-#setwd("C:/Users/C400463/R/Proj/getclean/train")
+
 
 train_measurements <- read.table(file="X_train.txt",header=F)
 train_activities <- read.table(file="y_train.txt",header=F)
@@ -14,7 +16,6 @@ train <- cbind(train_activities,train_individials,train_measurements)
 
 
 setwd("../test")
-#setwd("C:/Users/C400463/R/Proj/getclean/test")
 test_measurements <- read.table(file="X_test.txt",header=F)
 test_activities <- read.table(file="y_test.txt",header=F)
 test_individials <- read.table(file="subject_test.txt",header=F)
@@ -27,7 +28,6 @@ test <- cbind(test_activities,test_individials,test_measurements)
 merged <- rbind(train,test)
 
 #extract featurenames from file
-#setwd("C:/Users/C400463/R/Proj/getclean")
 setwd("../")
 featurenames <- read.table(file="features.txt",header=F)
 #Add Activity and individual ID to feature list in order to use as column names

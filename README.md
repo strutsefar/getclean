@@ -2,6 +2,8 @@ This file describes the workings of the Run_analysis.R script.
 
 The scipt is assumed to be placed in the folder containing the unzipped file provided for the assignment.
 
+NB: First the user needs to set the working directory to the script location, all other steps are then performed automatically.
+
 The script will import and merge the train and test set.
 Next, the script will read and append the "Activity" and "Individual" information as the two first columns in the merged dataset.
 Now, we extract the feature names and set them as the column names.
