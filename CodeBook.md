@@ -36,7 +36,7 @@ Apart from the two first columns, all columns contains observation data obtained
 Each of these variable start with either a "t" or an "f". A "t" indicates that the featureis a time-feature. An "f" indicates that this is a frequency-feature (a Fast Fourier Transform was applied).   
 Furthermore a feature could be an observation from the accelerometer or the gyroscope. This is indicated in the variable names containing one of these two terms.  
 The variables containing the word jerk indicate that that "body linear acceleration and angular velocity were derived in time to obtain [these signals]".  
-The variable names will contain either "mean" or "std" meaning that the observation is either a mean or a standard deviation. Note: we then take the mean of these variables to obtain either a mean of the mean or a mean of the standard deviation.  
+The variable names will contain either "mean" or "std" meaning that the observation is either a mean or a standard deviation. Note: The mean of these variables are then calculated to obtain either a mean of the mean or a mean of the standard deviation.  
 Lastly some variables contain information on a measurement in the three dimentional space, these variables contain the letters "x","y" or "z".  
 
 ####Units:  
