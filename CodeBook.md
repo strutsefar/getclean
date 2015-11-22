@@ -13,48 +13,48 @@ From each window, a vector of features was obtained by calculating variables fro
 
 The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. 
 These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. 
-Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise.
-Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
-Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ). 
-Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag). 
+Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise.  
+Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz.  
+Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ).  
+Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag).  
 
-Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag.
-(Note the 'f' to indicate frequency domain signals). 
+Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag.  
+(Note the 'f' to indicate frequency domain signals).  
 
 ---------
 
 Processed data:
-The train and test samples have been merged. 
-Furthermore we extracted columns containing feature Means and feature standard deviations.
-We then added two columns; one column containing the activity performed. (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) and one column indicating which of the individuals (1-30) is observed.
-Next, we calculated the mean of all columns.
+The train and test samples have been merged.  
+Furthermore we extracted columns containing feature Means and feature standard deviations.  
+We then added two columns; one column containing the activity performed. (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) and one column indicating which of the individuals (1-30) is observed.  
+Next, we calculated the mean of all columns.  
 
 
-Naming conventions:
+Naming conventions:  
 
-Apart from the two first columns, all columns contains observation data obtained from the device worn by the individual.
-Each of these variable start with either a "t" or an "f". A "t" indicates that the featureis a time-feature. An "f" indicates that this is a frequency-feature (a Fast Fourier Transform was applied). 
-Furthermore a feature could be an observation from the accelerometer or the gyroscope. This is indicated in the variable names containing one of these two terms. 
-The variables containing the word jerk indicate that that "body linear acceleration and angular velocity were derived in time to obtain [these signals]".
-The variable names will contain either "mean" or "std" meaning that the observation is either a mean or a standard deviation.
-Lastly some variables contain information on a measurement in the three dimentional space, these variables contain the letters "x","y" or "z".
+Apart from the two first columns, all columns contains observation data obtained from the device worn by the individual.  
+Each of these variable start with either a "t" or an "f". A "t" indicates that the featureis a time-feature. An "f" indicates that this is a frequency-feature (a Fast Fourier Transform was applied).   
+Furthermore a feature could be an observation from the accelerometer or the gyroscope. This is indicated in the variable names containing one of these two terms.  
+The variables containing the word jerk indicate that that "body linear acceleration and angular velocity were derived in time to obtain [these signals]".  
+The variable names will contain either "mean" or "std" meaning that the observation is either a mean or a standard deviation.  
+Lastly some variables contain information on a measurement in the three dimentional space, these variables contain the letters "x","y" or "z".  
 
-Units:
+Units:  
 
-The units for variables measured by the accelerometer is G's (the gravity of earth) specifically 9.80665m/second^2.
-The units for variables measured by the gyroscope is radians pr. second. 
-Also note the transformations described in the previous section.
-All raw features was normalized and bounded between  [-1,1], so this is be true for the variables in the processes data as well.
+The units for variables measured by the accelerometer is G's (the gravity of earth) specifically 9.80665m/second^2.  
+The units for variables measured by the gyroscope is radians pr. second.  
+Also note the transformations described in the previous section.  
+All raw features was normalized and bounded between  [-1,1], so this is be true for the variables in the processes data as well.  
 
 
 
-Below is the full list of variable names in the tidy dataset.
+Below is the full list of variable names in the tidy dataset.  
 
 
  [1] "activity"                       "individual"                     "tbodyaccelerometer-mean-x"      "tbodyaccelerometer-mean-y"     
  [5] "tbodyaccelerometer-mean-z"      "tbodyaccelerometer-std-x"       "tbodyaccelerometer-std-y"       "tbodyaccelerometer-std-z"      
  [9] "tgravityaccelerometer-mean-x"   "tgravityaccelerometer-mean-y"   "tgravityaccelerometer-mean-z"   "tgravityaccelerometer-std-x"   
-[13] "tgravityaccelerometer-std-y"    "tgravityaccelerometer-std-z"    "tbodyaccelerometerjerk-mean-x"  "tbodyaccelerometerjerk-mean-y" 
+[13] "tgravityaccelerometer-std-y"    "tgravityaccelerometer-std-z"    "tbodyaccelerometerjerk-mean-x"  "tbodyaccelerometerjerk-mean-y"  
 [17] "tbodyaccelerometerjerk-mean-z"  "tbodyaccelerometerjerk-std-x"   "tbodyaccelerometerjerk-std-y"   "tbodyaccelerometerjerk-std-z"  
 [21] "tbodygyroscope-mean-x"          "tbodygyroscope-mean-y"          "tbodygyroscope-mean-z"          "tbodygyroscope-std-x"          
 [25] "tbodygyroscope-std-y"           "tbodygyroscope-std-z"           "tbodygyroscopejerk-mean-x"      "tbodygyroscopejerk-mean-y"     
@@ -68,7 +68,7 @@ Below is the full list of variable names in the tidy dataset.
 [57] "fbodygyroscope-mean-z"          "fbodygyroscope-std-x"           "fbodygyroscope-std-y"           "fbodygyroscope-std-z"          
 [61] "fbodyaccelerometermag-mean"     "fbodyaccelerometermag-std"      "fbodyaccelerometerjerkmag-mean" "fbodyaccelerometerjerkmag-std" 
 [65] "fbodygyroscopemag-mean"         "fbodygyroscopemag-std"          "fbodygyroscopejerkmag-mean"     "fbodygyroscopejerkmag-std"          
-[57] "fbodygyro-mean-z"               "fbodygyro-std-x"                "fbodygyro-std-y"                "fbodygyro-std-z"               
-[61] "fbodyaccelerometermag-mean"     "fbodyaccelerometermag-std"      "fbodyaccelerometerjerkmag-mean" "fbodyaccelerometerjerkmag-std" 
-[65] "fbodygyromag-mean"              "fbodygyromag-std"               "fbodygyrojerkmag-mean"          "fbodygyrojerkmag-std"  
+[57] "fbodygyro-mean-z"               "fbodygyro-std-x"                "fbodygyro-std-y"                "fbodygyro-std-z"                
+[61] "fbodyaccelerometermag-mean"     "fbodyaccelerometermag-std"      "fbodyaccelerometerjerkmag-mean" "fbodyaccelerometerjerkmag-std"  
+[65] "fbodygyromag-mean"              "fbodygyromag-std"               "fbodygyrojerkmag-mean"          "fbodygyrojerkmag-std"   
       
