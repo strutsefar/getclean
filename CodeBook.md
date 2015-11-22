@@ -1,4 +1,4 @@
-###Raw data description (copied from source):
+####Raw data description (copied from source):
 
 The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years.  
 Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist.  
@@ -23,14 +23,14 @@ Finally a Fast Fourier Transform (FFT) was applied to some of these signals prod
 
 ---------
 
-###Processed data:
+####Processed data:
 The train and test samples have been merged.  
-Furthermore we extracted columns containing feature Means and feature standard deviations.  
-We then added two columns; one column containing the activity performed. (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) and one column indicating which of the individuals (1-30) is observed.  
-Next, we calculated the mean of all columns.  
+Furthermore the columns containing feature Means and feature standard deviations have been extracted.  
+Two columns were added: one column containing the activity performed. (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) and one column indicating which of the individuals (1-30) is observed.  
+Lastly the mean for all variables for each individual for each activity is calculated.
 
 
-###Naming conventions:  
+####Naming conventions:  
 
 Apart from the two first columns, all columns contains observation data obtained from the device worn by the individual.  
 Each of these variable start with either a "t" or an "f". A "t" indicates that the featureis a time-feature. An "f" indicates that this is a frequency-feature (a Fast Fourier Transform was applied).   
@@ -39,7 +39,7 @@ The variables containing the word jerk indicate that that "body linear accelerat
 The variable names will contain either "mean" or "std" meaning that the observation is either a mean or a standard deviation.  
 Lastly some variables contain information on a measurement in the three dimentional space, these variables contain the letters "x","y" or "z".  
 
-###Units:  
+####Units:  
 
 The units for variables measured by the accelerometer is G's (the gravity of earth) specifically 9.80665m/second^2.  
 The units for variables measured by the gyroscope is radians pr. second.  
@@ -48,7 +48,7 @@ All raw features was normalized and bounded between  [-1,1], so this is be true 
 
 
 
-###Below is the full list of variable names in the tidy dataset.  
+####Below is the full list of variable names in the tidy dataset.  
 
 
  [1] "activity"                       "individual"                     "tbodyaccelerometer-mean-x"      "tbodyaccelerometer-mean-y"     
