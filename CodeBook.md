@@ -29,6 +29,7 @@ Furthermore we extracted columns containing feature Means and feature standard d
 We then added two columns; one column containing the activity performed. (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) and one column indicating which of the individuals (1-30) is observed.
 Next, we calculated the mean of all columns.
 
+
 Naming conventions:
 
 Apart from the two first columns, all columns contains observation data obtained from the device worn by the individual.
@@ -38,7 +39,14 @@ The variables containing the word jerk indicate that that "body linear accelerat
 The variable names will contain either "mean" or "std" meaning that the observation is either a mean or a standard deviation.
 Lastly some variables contain information on a measurement in the three dimentional space, these variables contain the letters "x","y" or "z".
 
+Units:
+
+The units for variables measured by the accelerometer is G's (the gravity of earth) specifically 9.80665m/second^2.
+The units for variables measured by the gyroscope is radians pr. second. 
+Also note the transformations described in the previous section.
 All raw features was normalized and bounded between  [-1,1], so this is be true for the variables in the processes data as well.
+
+
 
 Below is the full list of variable names in the tidy dataset.
 

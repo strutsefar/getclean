@@ -1,7 +1,8 @@
 ####################################################
 #1. Merge train and test set. (plus name columns)
 ####################################################
-#first set the working directory to the script location (which also contains the unzipped data files/directories)
+
+#User need to place the samsung data in the work directory
 
 
 setwd("./train")
@@ -75,7 +76,6 @@ cleannames <- gsub("bodybody","body",cleannames) #fix duplicated body variables
 library(dplyr)
 meanSet <- group_by(subset,Activity,Individual) %>% summarise_each(funs(mean))
 colnames(meanSet) <- cleannames
-#Add Avg. prefix to the measurement column names to indicate that this is an average of the variable
 
 
 #Export the dataset as a txt, i choose Quotes = False because it is easier to read for the grader
