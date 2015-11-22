@@ -48,7 +48,7 @@ All raw features was normalized and bounded between  [-1,1], so this is be true 
 
 
 
-####Below is the full list of variable names in the tidy dataset.  
+#####Below is the full list of variable names in the tidy dataset.  
 
 
 "activity"  
